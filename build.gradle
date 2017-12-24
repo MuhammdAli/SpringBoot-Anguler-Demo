@@ -36,10 +36,11 @@ dependencies {
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
+/* Commenting Due To Heroku */
 node {
     version = "9.3.0"
-    download = false
-    nodeModulesDir = file("angular")
+    download = true
+    nodeModulesDir = file("angular-latest")
 }
 
 task buildClientDev(type: NpmTask, dependsOn: 'npmInstall') {

@@ -23,3 +23,9 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+angular/node_modules/
+src/main/resources/templates/
+src/test/resources/
+
+### Node ###
+angular-latest/node_modules/

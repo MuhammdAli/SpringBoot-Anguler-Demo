@@ -1,0 +1,15 @@
+<h2>Extract Statistics About Famous FaceBook Pages</h2>
+<input class="form-control" [formControl]="url" placeholder="Facebook Page URL">
+<button class="btn btn-success" (click)="getLatestEvents()">Get Latest Events</button>
+<button class="btn btn-success" (click)="getUsers()">Get Top Users</button>
+
+<h2>Extract Statistics About Near By Places</h2>
+<input class="form-control" [formControl]="country" placeholder="Enter Country">
+<input class="form-control" [formControl]="state" placeholder="Enter State/City">
+<input class="form-control" [formControl]="location" placeholder="Enter Location">
+<button class="btn btn-success" (click)="getNearByPlaces()">Get NearBy Places</button>
+
+<events-list *ngIf="showEvents" [latestEvents]="latestEvents"></events-list>
+<users-list *ngIf="showUsers" [mostActive]="mostActive"></users-list>
+
+<places-list *ngIf="showPlaces" [allPlaces]="allPlaces"></places-list>

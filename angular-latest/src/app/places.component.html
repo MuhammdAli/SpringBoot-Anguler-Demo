@@ -1,0 +1,9 @@
+<h3>Near By Places</h3>
+<ul class="places">
+  <li *ngFor="let place of allPlaces">
+    <h4>{{ place.name }}</h4>
+    <img src="{{ place.picture }}" alt="PhotoOfPlace">
+    <div>CheckIns: {{ place.checkin }} | Link: <a href="{{ place.link }}">{{ place.link }}</a></div>
+    <p *ngIf="place.about">{{ place.about }}</p>
+  </li>
+</ul>
